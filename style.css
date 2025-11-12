@@ -140,25 +140,54 @@ h1, h2, h3 {
 .skills {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    gap: 30px;
+    gap: 35px 40px;
     margin-bottom: 40px;
-    max-width: 600px;
+    max-width: 650px;
+}
+
+.skill-column {
+    min-width: 0;
 }
 
 .skill-column h3 {
-    font-size: 1rem;
+    font-size: 0.95rem;
     font-weight: 600;
     color: var(--cor-texto-escuro);
-    margin-bottom: 10px;
+    margin-bottom: 12px;
     text-transform: uppercase;
     letter-spacing: 1px;
+    border-bottom: 2px solid var(--cor-primaria);
+    padding-bottom: 6px;
+    display: inline-block;
+    width: 100%;
 }
 
-.skill-column p {
-    font-size: 0.9rem;
-    color: var(--cor-texto-cinza);
+.skill-column ul {
+    list-style: none;
+    padding: 0;
     margin: 0;
-    line-height: 1.6;
+}
+
+.skill-column li {
+    font-size: 0.95rem;
+    color: var(--cor-texto-cinza);
+    margin-bottom: 8px;
+    padding-left: 20px;
+    position: relative;
+    line-height: 1.5;
+}
+
+.skill-column li::before {
+    content: '•';
+    position: absolute;
+    left: 0;
+    color: var(--cor-primaria);
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+
+.skill-column li:last-child {
+    margin-bottom: 0;
 }
 
 .social-icons {
