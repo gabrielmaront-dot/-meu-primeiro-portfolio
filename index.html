@@ -3,42 +3,147 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Meu Primeiro Portfólio</title>
+    <title>Gabriel Maron - Portfólio</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Poppins:wght@600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <main class="glass-panel">
-        <header class="hero">
-            <h1>Olá, eu sou <span class="destaque">Gabriel Maron</span></h1>
-            <p>Este é o meu primeiro site como programador!</p>
-        </header>
-
-        <div class="panel-content">
-            <section class="glass-card sobre">
-                <h2>Sobre mim</h2>
-                <p>
-                    Tenho 15 anos, gosto de tecnologia, jogos e estou aprendendo a programar
-                    usando GitHub e Cursor.
-                </p>
-            </section>
-
-            <section class="glass-card gostos">
-                <h2>Coisas que eu gosto</h2>
-                <ul>
-                    <li>Jogos: Call of duty, FIFA, etc.</li>
-                    <li>Séries / Filmes</li>
-                    <li>Música</li>
-                    <li>Programar e criar coisas novas</li>
-                </ul>
-            </section>
+    <!-- Hero Section -->
+    <section class="hero" id="inicio">
+        <div class="hero-header">
+            <div class="logo">R</div>
+            <nav class="nav-menu">
+                <a href="#inicio">INÍCIO</a>
+                <a href="#sobre">SOBRE</a>
+                <a href="#projetos">PROJETOS</a>
+                <a href="#contato">CONTATO</a>
+            </nav>
         </div>
+        <div class="hero-content">
+            <h1>Olá, me chamo Gabriel Maron.</h1>
+            <p>Tenho 15 anos, sou apaixonado por tecnologia, hardware, desenvolvimento web front-end e novas tecnologias. Atualmente concluindo o 9º ano do ensino fundamental e, no próximo ano, iniciarei o ensino médio com técnico integrado em Desenvolvimento de Sistemas.</p>
+        </div>
+    </section>
 
-        <footer class="glass-footer">
-            <p>“Feito com ❤️ usando HTML e CSS, cada detalhe deste portfólio reflete minha paixão por aprender e criar experiências na web.”</p>
-        </footer>
-    </main>
+    <!-- Sobre Section -->
+    <section id="sobre" class="sobre">
+        <div class="container">
+            <h2 class="section-title">conheça um pouco mais sobre mim</h2>
+            <div class="sobre-content">
+                <div class="sobre-texto">
+                    <p>
+                        <p>
+                            Meu nome é Gabriel Maron, tenho 15 anos e atualmente moro no Rio Grande do Sul, Brasil. 
+                            Estou concluindo o 9º ano do ensino fundamental e, no próximo ano, iniciarei o ensino médio 
+                            com técnico integrado em Desenvolvimento de Sistemas. Sou apaixonado por tecnologia, hardware 
+                            e desenvolvimento web front-end, sempre buscando aprender novas tecnologias. Além da programação, 
+                            também sou apaixonado por jogos e tudo relacionado a esse universo.
+                        </p>
+                    </p>
+                    
+                    <div class="skills">
+                        <div class="skill-column">
+                            <h3>Linguagens</h3>
+                            <p>HTML, CSS, JAVASCRIPT</p>
+                        </div>
+                        <div class="skill-column">
+                            <h3>Design</h3>
+                            <p>FIGMA, ADOBE XD, PHOTOSHOP</p>
+                        </div>
+                        <div class="skill-column">
+                            <h3>Outros</h3>
+                            <p>GIT, GITHUB</p>
+                        </div>
+                    </div>
+
+                    <div class="social-icons">
+                        <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="#" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                        <a href="#" aria-label="Dribbble"><i class="fab fa-dribbble"></i></a>
+                        <a href="#" aria-label="Behance"><i class="fab fa-behance"></i></a>
+                        <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                    </div>
+                </div>
+                <div class="sobre-ilustracao">
+                    <div class="ilustracao-container">
+                        <img src="imagens/foto.jpeg" alt="Gabriel Maron" class="foto-perfil">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projetos Section -->
+    <section id="projetos" class="projetos">
+        <div class="container">
+            <h2 class="section-title">aqui estão alguns dos meus projetos</h2>
+            <div class="projetos-grid">
+                <div class="projeto-card">
+                    <h3>Repositório-Nome</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                    <button class="btn-projeto">VER PROJETO</button>
+                </div>
+                <div class="projeto-card">
+                    <h3>Repositório-Nome</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                    <button class="btn-projeto">VER PROJETO</button>
+                </div>
+                <div class="projeto-card">
+                    <h3>Repositório-Nome</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                    <button class="btn-projeto">VER PROJETO</button>
+                </div>
+                <div class="projeto-card">
+                    <h3>Repositório-Nome</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                    <button class="btn-projeto">VER PROJETO</button>
+                </div>
+                <div class="projeto-card">
+                    <h3>Repositório-Nome</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                    <button class="btn-projeto">VER PROJETO</button>
+                </div>
+                <div class="projeto-card">
+                    <h3>Repositório-Nome</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                    <button class="btn-projeto">VER PROJETO</button>
+                </div>
+                <div class="projeto-card">
+                    <h3>Repositório-Nome</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                    <button class="btn-projeto">VER PROJETO</button>
+                </div>
+                <div class="projeto-card">
+                    <h3>Repositório-Nome</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                    <button class="btn-projeto">VER PROJETO</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="contato" class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <p class="copyright">Alguns direitos reservados - Gabriel Maron.</p>
+                <div class="footer-social">
+                    <h4>Sociais</h4>
+                    <div class="social-icons">
+                        <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="#" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                        <a href="#" aria-label="Dribbble"><i class="fab fa-dribbble"></i></a>
+                        <a href="#" aria-label="Behance"><i class="fab fa-behance"></i></a>
+                        <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
 </body>
 </html>
