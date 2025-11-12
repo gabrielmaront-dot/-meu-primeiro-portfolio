@@ -137,57 +137,158 @@ h1, h2, h3 {
     line-height: 1.8;
 }
 
+/* Bloco de vidro (glassmorphism) */
 .skills {
+    background: rgba(255, 255, 255, 0.85);
+    backdrop-filter: blur(12px) saturate(180%);
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    border-radius: 20px;
+    padding: 35px 40px;
+    margin-bottom: 40px;
+    box-shadow: 
+        0 8px 32px rgba(0, 0, 0, 0.08),
+        inset 0 1px 0 rgba(255, 255, 255, 0.6);
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    gap: 35px 40px;
-    margin-bottom: 40px;
-    max-width: 650px;
+    gap: 30px 45px;
+    max-width: 720px;
 }
 
 .skill-column {
     min-width: 0;
 }
 
-.skill-column h3 {
-    font-size: 0.95rem;
+/* Títulos com efeito LED - Cores múltiplas */
+.skill-column:nth-child(1) h3 {
+    font-size: 0.9rem;
     font-weight: 600;
-    color: var(--cor-texto-escuro);
-    margin-bottom: 12px;
+    color: #3b82f6; /* Azul */
+    margin-bottom: 10px;
     text-transform: uppercase;
-    letter-spacing: 1px;
-    border-bottom: 2px solid var(--cor-primaria);
-    padding-bottom: 6px;
-    display: inline-block;
-    width: 100%;
+    letter-spacing: 1.2px;
+    text-shadow: 
+        0 0 5px #3b82f6,
+        0 0 10px #3b82f6,
+        0 0 15px #3b82f6;
+    animation: ledGlow1 2.5s ease-in-out infinite alternate;
 }
 
-.skill-column ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
+.skill-column:nth-child(2) h3 {
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: #8b5cf6; /* Roxo */
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    letter-spacing: 1.2px;
+    text-shadow: 
+        0 0 5px #8b5cf6,
+        0 0 10px #8b5cf6,
+        0 0 15px #8b5cf6;
+    animation: ledGlow2 2.5s ease-in-out infinite alternate;
 }
 
-.skill-column li {
+.skill-column:nth-child(3) h3 {
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: #10b981; /* Verde */
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    letter-spacing: 1.2px;
+    text-shadow: 
+        0 0 5px #10b981,
+        0 0 10px #10b981,
+        0 0 15px #10b981;
+    animation: ledGlow3 2.5s ease-in-out infinite alternate;
+}
+
+.skill-column:nth-child(4) h3 {
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: #f59e0b; /* Laranja */
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    letter-spacing: 1.2px;
+    text-shadow: 
+        0 0 5px #f59e0b,
+        0 0 10px #f59e0b,
+        0 0 15px #f59e0b;
+    animation: ledGlow4 2.5s ease-in-out infinite alternate;
+}
+
+/* Animações LED para cada cor */
+@keyframes ledGlow1 {
+    from {
+        text-shadow: 
+            0 0 5px #3b82f6,
+            0 0 10px #3b82f6,
+            0 0 15px #3b82f6;
+    }
+    to {
+        text-shadow: 
+            0 0 10px #3b82f6,
+            0 0 20px #3b82f6,
+            0 0 30px #3b82f6,
+            0 0 40px #3b82f6;
+    }
+}
+
+@keyframes ledGlow2 {
+    from {
+        text-shadow: 
+            0 0 5px #8b5cf6,
+            0 0 10px #8b5cf6,
+            0 0 15px #8b5cf6;
+    }
+    to {
+        text-shadow: 
+            0 0 10px #8b5cf6,
+            0 0 20px #8b5cf6,
+            0 0 30px #8b5cf6,
+            0 0 40px #8b5cf6;
+    }
+}
+
+@keyframes ledGlow3 {
+    from {
+        text-shadow: 
+            0 0 5px #10b981,
+            0 0 10px #10b981,
+            0 0 15px #10b981;
+    }
+    to {
+        text-shadow: 
+            0 0 10px #10b981,
+            0 0 20px #10b981,
+            0 0 30px #10b981,
+            0 0 40px #10b981;
+    }
+}
+
+@keyframes ledGlow4 {
+    from {
+        text-shadow: 
+            0 0 5px #f59e0b,
+            0 0 10px #f59e0b,
+            0 0 15px #f59e0b;
+    }
+    to {
+        text-shadow: 
+            0 0 10px #f59e0b,
+            0 0 20px #f59e0b,
+            0 0 30px #f59e0b,
+            0 0 40px #f59e0b;
+    }
+}
+
+/* Texto das tecnologias - sem quebras */
+.skill-column p {
     font-size: 0.95rem;
     color: var(--cor-texto-cinza);
-    margin-bottom: 8px;
-    padding-left: 20px;
-    position: relative;
-    line-height: 1.5;
-}
-
-.skill-column li::before {
-    content: '•';
-    position: absolute;
-    left: 0;
-    color: var(--cor-primaria);
-    font-weight: bold;
-    font-size: 1.2rem;
-}
-
-.skill-column li:last-child {
-    margin-bottom: 0;
+    margin: 0;
+    line-height: 1.6;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 
 .social-icons {
@@ -351,6 +452,11 @@ h1, h2, h3 {
         grid-template-columns: 1fr;
         gap: 25px;
         max-width: 100%;
+        padding: 30px 25px;
+    }
+    
+    .skill-column p {
+        white-space: normal;
     }
 
     .projetos-grid {
